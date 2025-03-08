@@ -28,7 +28,7 @@ const Header = () => {
           <div className="w-8 h-8 rounded-lg bg-gradient-to-r from-blue-600 to-cyan-500 flex items-center justify-center">
             <span className="text-white font-bold">L</span>
           </div>
-          <span className="font-bold text-xl">LearnInfinity</span>
+          <span className="font-bold text-xl">learnfinity</span>
         </Link>
 
         {/* Desktop Navigation */}

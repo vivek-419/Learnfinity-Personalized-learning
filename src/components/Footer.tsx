@@ -1,4 +1,3 @@
-
 import React from 'react';
 import { Link } from 'react-router-dom';
 
@@ -12,7 +11,7 @@ const Footer = () => {
               <div className="w-8 h-8 rounded-lg bg-gradient-to-r from-blue-600 to-cyan-500 flex items-center justify-center">
                 <span className="text-white font-bold">L</span>
               </div>
-              <span className="font-bold text-xl">LearnInfinity</span>
+              <span className="font-bold text-xl">learnfinity</span>
             </Link>
             <p className="text-sm text-gray-500 mb-4">
               AI-powered personalized learning for the future of education and career growth.
@@ -91,7 +90,7 @@ const Footer = () => {
         </div>
         <div className="mt-12 pt-8 border-t border-gray-200">
           <p className="text-sm text-gray-400 text-center">
-            &copy; {new Date().getFullYear()} LearnInfinity. All rights reserved.
+            &copy; {new Date().getFullYear()} learnfinity. All rights reserved.
           </p>
         </div>
       </div>

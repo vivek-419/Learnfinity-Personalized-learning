@@ -1,9 +1,10 @@
-
 import React, { useState, useEffect } from 'react';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
 import { Badge } from '@/components/ui/badge';
 import { ArrowRight, BookOpen, Code, FileText, Stars, Video } from 'lucide-react';
+import { useNavigate } from 'react-router-dom';
+import { toast } from 'sonner';
 
 const courseData = [
   {
@@ -57,6 +58,7 @@ const LearningPath = () => {
   const [isVisible, setIsVisible] = useState(false);
   const [showingAll, setShowingAll] = useState(false);
   const [courses, setCourses] = useState(courseData.filter(course => course.isRecommended));
+  const navigate = useNavigate();
 
   useEffect(() => {
     const handleScroll = () => {
@@ -77,6 +79,11 @@ const LearningPath = () => {
   const handleShowAll = () => {
     setShowingAll(true);
     setCourses(courseData);
+  };
+
+  const handleStartCourse = (courseId: number, courseTitle: string) => {
+    toast.info(`You need to sign in to start the ${courseTitle} course`);
+    navigate('/login');
   };
 
   return (
@@ -143,7 +150,10 @@ const LearningPath = () => {
                     ))}
                   </div>
 
-                  <Button className="w-full flex items-center justify-center bg-primary/10 hover:bg-primary/20 text-primary border border-primary/20">
+                  <Button 
+                    className="w-full flex items-center justify-center bg-primary/10 hover:bg-primary/20 text-primary border border-primary/20"
+                    onClick={() => handleStartCourse(course.id, course.title)}
+                  >
                     {course.completionRate > 0 ? 'Continue Learning' : 'Start Course'}
                     <ArrowRight size={16} className="ml-2" />
                   </Button>

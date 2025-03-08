@@ -4,6 +4,8 @@ import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from '@/components/ui/card';
 import { Progress } from '@/components/ui/progress';
 import { ArrowRight, Check, ChevronRight } from 'lucide-react';
+import { useNavigate } from 'react-router-dom';
+import { toast } from 'sonner';
 
 const questionData = [
   {
@@ -55,6 +57,7 @@ const SkillAssessment = () => {
     strengths: [],
     suggestions: []
   });
+  const navigate = useNavigate();
 
   const currentQuestion = questionData[currentQuestionIndex];
 
@@ -89,6 +92,17 @@ const SkillAssessment = () => {
   const handleSubmit = () => {
     if (selectedOption === null) return;
     setIsSubmitted(true);
+  };
+
+  const handleViewLearningPath = () => {
+    toast.success("Assessment completed! Redirecting to your personalized learning path");
+    // Scroll to learning path section or navigate to dedicated page
+    const learningPathSection = document.getElementById('learning-path');
+    if (learningPathSection) {
+      learningPathSection.scrollIntoView({ behavior: 'smooth' });
+    } else {
+      navigate('/dashboard');
+    }
   };
 
   // Simulated typing effect
@@ -213,7 +227,10 @@ const SkillAssessment = () => {
                         </ul>
                       </div>
                       
-                      <Button className="w-full bg-primary hover:bg-primary/90 transition-colors">
+                      <Button 
+                        className="w-full bg-primary hover:bg-primary/90 transition-colors"
+                        onClick={handleViewLearningPath}
+                      >
                         View Your Personalized Learning Path
                       </Button>
                     </div>

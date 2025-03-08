@@ -2,11 +2,12 @@
 import React, { useEffect, useRef, useState } from 'react';
 import { Button } from '@/components/ui/button';
 import { ArrowRight } from 'lucide-react';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 
 const Hero = () => {
   const [isVisible, setIsVisible] = useState(false);
   const heroRef = useRef<HTMLDivElement>(null);
+  const navigate = useNavigate();
 
   useEffect(() => {
     setIsVisible(true);
@@ -32,6 +33,14 @@ const Hero = () => {
     document.addEventListener('mousemove', handleMouseMove);
     return () => document.removeEventListener('mousemove', handleMouseMove);
   }, []);
+
+  const handleGetStarted = () => {
+    navigate('/register');
+  };
+
+  const handleLearnMore = () => {
+    navigate('/features');
+  };
 
   return (
     <div 
@@ -61,14 +70,21 @@ const Hero = () => {
             </p>
             
             <div className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-16">
-              <Button asChild size="lg" className="bg-primary hover:bg-primary/90 transition-colors text-base h-12 px-6">
-                <Link to="/register">
-                  Get Started
-                  <ArrowRight size={18} className="ml-2" />
-                </Link>
+              <Button 
+                size="lg" 
+                className="bg-primary hover:bg-primary/90 transition-colors text-base h-12 px-6"
+                onClick={handleGetStarted}
+              >
+                Get Started
+                <ArrowRight size={18} className="ml-2" />
               </Button>
-              <Button asChild variant="outline" size="lg" className="border-primary/20 text-primary h-12 px-6">
-                <Link to="/features">Learn More</Link>
+              <Button 
+                variant="outline" 
+                size="lg" 
+                className="border-primary/20 text-primary h-12 px-6"
+                onClick={handleLearnMore}
+              >
+                Learn More
               </Button>
             </div>
           </div>

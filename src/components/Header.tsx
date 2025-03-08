@@ -1,12 +1,13 @@
 
 import React, { useState, useEffect } from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import { Button } from '@/components/ui/button';
 import { Menu, X } from 'lucide-react';
 
 const Header = () => {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  const navigate = useNavigate();
 
   useEffect(() => {
     const handleScroll = () => {
@@ -16,6 +17,14 @@ const Header = () => {
     window.addEventListener('scroll', handleScroll);
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
+
+  const handleSignIn = () => {
+    navigate('/login');
+  };
+
+  const handleGetStarted = () => {
+    navigate('/register');
+  };
 
   return (
     <header 
@@ -42,11 +51,18 @@ const Header = () => {
           <Link to="/about" className="text-foreground/80 hover:text-foreground transition-colors">
             About
           </Link>
-          <Button asChild variant="ghost" className="text-foreground/80 hover:text-foreground">
-            <Link to="/login">Sign In</Link>
+          <Button 
+            variant="ghost" 
+            className="text-foreground/80 hover:text-foreground"
+            onClick={handleSignIn}
+          >
+            Sign In
           </Button>
-          <Button asChild className="bg-primary hover:bg-primary/90 transition-colors">
-            <Link to="/register">Get Started</Link>
+          <Button 
+            className="bg-primary hover:bg-primary/90 transition-colors"
+            onClick={handleGetStarted}
+          >
+            Get Started
           </Button>
         </nav>
 
@@ -88,19 +104,23 @@ const Header = () => {
             >
               About
             </Link>
-            <Link 
-              to="/login" 
-              className="text-foreground/80 hover:text-foreground transition-colors py-2"
-              onClick={() => setIsMobileMenuOpen(false)}
+            <button 
+              className="text-foreground/80 hover:text-foreground transition-colors py-2 text-left"
+              onClick={() => {
+                setIsMobileMenuOpen(false);
+                navigate('/login');
+              }}
             >
               Sign In
-            </Link>
+            </button>
             <Button 
-              asChild 
               className="bg-primary hover:bg-primary/90 transition-colors w-full justify-center"
-              onClick={() => setIsMobileMenuOpen(false)}
+              onClick={() => {
+                setIsMobileMenuOpen(false);
+                navigate('/register');
+              }}
             >
-              <Link to="/register">Get Started</Link>
+              Get Started
             </Button>
           </nav>
         </div>

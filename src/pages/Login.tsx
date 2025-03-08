@@ -18,7 +18,7 @@ const Login = () => {
   };
 
   return (
-    <div className="min-h-screen flex items-center justify-center bg-gradient-to-b from-background to-blue-50/30 p-4">
+    <div className="min-h-screen flex items-center justify-center bg-gradient-to-b from-background to-background/80 p-4">
       <div className="w-full max-w-md">
         <div className="mb-6">
           <Link to="/" className="flex items-center text-sm text-primary hover:underline">
@@ -27,10 +27,10 @@ const Login = () => {
           </Link>
         </div>
         
-        <Card className="glass border-white/20 shadow-elevated overflow-hidden">
+        <Card className="border-secondary/20 shadow-elevated overflow-hidden">
           <CardHeader className="space-y-1">
             <div className="flex justify-center mb-4">
-              <div className="w-10 h-10 rounded-lg bg-gradient-to-r from-blue-600 to-cyan-500 flex items-center justify-center">
+              <div className="w-10 h-10 rounded-lg bg-gradient-to-r from-indigo-600 to-violet-500 flex items-center justify-center">
                 <span className="text-white font-bold">L</span>
               </div>
             </div>
@@ -43,7 +43,7 @@ const Login = () => {
             <form onSubmit={handleLogin} className="space-y-4">
               <div className="space-y-2">
                 <Label htmlFor="email">Email</Label>
-                <Input id="email" placeholder="name@example.com" type="email" required />
+                <Input id="email" placeholder="name@example.com" type="email" required className="bg-secondary/40" />
               </div>
               <div className="space-y-2">
                 <div className="flex items-center justify-between">
@@ -52,7 +52,7 @@ const Login = () => {
                     Forgot password?
                   </Link>
                 </div>
-                <Input id="password" type="password" required />
+                <Input id="password" type="password" required className="bg-secondary/40" />
               </div>
               <Button type="submit" className="w-full bg-primary hover:bg-primary/90">
                 Sign In

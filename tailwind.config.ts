@@ -122,10 +122,10 @@ export default {
 				'xs': '2px',
 			},
 			boxShadow: {
-				'glass': '0 4px 30px rgba(0, 0, 0, 0.1)',
-				'glass-lg': '0 8px 32px rgba(0, 0, 0, 0.1)',
-				'subtle': '0 1px 3px rgba(0, 0, 0, 0.05)',
-				'elevated': '0 10px 30px -5px rgba(0, 0, 0, 0.1)'
+				'glass': '0 4px 30px rgba(0, 0, 0, 0.3)',
+				'glass-lg': '0 8px 32px rgba(0, 0, 0, 0.3)',
+				'subtle': '0 1px 3px rgba(0, 0, 0, 0.2)',
+				'elevated': '0 10px 30px -5px rgba(0, 0, 0, 0.3)'
 			},
 			backgroundImage: {
 				'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',

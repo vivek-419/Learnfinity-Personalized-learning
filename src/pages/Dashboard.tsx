@@ -54,7 +54,7 @@ const Dashboard = () => {
               <div className="w-8 h-8 rounded-lg bg-gradient-to-r from-blue-600 to-cyan-500 flex items-center justify-center">
                 <span className="text-white font-bold">L</span>
               </div>
-              <span className="font-bold text-lg">LearnInfinity</span>
+              <span className="font-bold text-lg">Learnfinity</span>
             </Link>
             <button 
               className="md:hidden" 
@@ -125,7 +125,7 @@ const Dashboard = () => {
               <div className="w-8 h-8 rounded-lg bg-gradient-to-r from-blue-600 to-cyan-500 flex items-center justify-center">
                 <span className="text-white font-bold">L</span>
               </div>
-              <span className="font-bold text-lg">LearnInfinity</span>
+              <span className="font-bold text-lg">Learnfinity</span>
             </Link>
             <div className="w-8 h-8 rounded-full bg-gray-200 flex items-center justify-center">
               <span className="text-sm font-medium">JD</span>

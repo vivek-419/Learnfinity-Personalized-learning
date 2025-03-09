@@ -49,10 +49,10 @@ const Hero = () => {
     >
       {/* Background elements */}
       <div className="absolute inset-0 bg-grid-pattern bg-grid opacity-30 pointer-events-none"></div>
-      <div className="absolute -top-20 -right-20 w-64 h-64 bg-blue-200/20 rounded-full blur-3xl parallax" data-speed="10"></div>
-      <div className="absolute -bottom-32 -left-32 w-96 h-96 bg-cyan-200/20 rounded-full blur-3xl parallax" data-speed="15"></div>
-      <div className="absolute top-1/3 right-1/4 w-6 h-6 bg-blue-400 rounded-full blur-sm animate-pulse-soft parallax" data-speed="25"></div>
-      <div className="absolute bottom-1/4 left-1/3 w-4 h-4 bg-cyan-400 rounded-full blur-sm animate-pulse-soft parallax" data-speed="20"></div>
+      <div className="absolute -top-20 -right-20 w-64 h-64 bg-purple-200/20 rounded-full blur-3xl parallax" data-speed="10"></div>
+      <div className="absolute -bottom-32 -left-32 w-96 h-96 bg-indigo-200/20 rounded-full blur-3xl parallax" data-speed="15"></div>
+      <div className="absolute top-1/3 right-1/4 w-6 h-6 bg-purple-400 rounded-full blur-sm animate-pulse-soft parallax" data-speed="25"></div>
+      <div className="absolute bottom-1/4 left-1/3 w-4 h-4 bg-indigo-400 rounded-full blur-sm animate-pulse-soft parallax" data-speed="20"></div>
       
       <div className="container mx-auto px-4 md:px-6 relative z-10">
         <div className="max-w-4xl mx-auto text-center">
@@ -61,7 +61,7 @@ const Hero = () => {
               <span className="text-gradient">AI-Powered Learning</span> for the{" "}
               <span className="relative">
                 Future
-                <span className="absolute -bottom-1 left-0 right-0 h-1 bg-gradient-to-r from-blue-600 to-cyan-500 rounded-full"></span>
+                <span className="absolute -bottom-1 left-0 right-0 h-1 bg-gradient-to-r from-indigo-600 to-purple-500 rounded-full"></span>
               </span>
             </h1>
             

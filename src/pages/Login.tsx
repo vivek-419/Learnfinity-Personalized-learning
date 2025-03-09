@@ -30,7 +30,7 @@ const Login = () => {
         <Card className="border-secondary/20 shadow-elevated overflow-hidden">
           <CardHeader className="space-y-1">
             <div className="flex justify-center mb-4">
-              <div className="w-10 h-10 rounded-lg bg-gradient-to-r from-indigo-600 to-violet-500 flex items-center justify-center">
+              <div className="w-10 h-10 rounded-lg bg-gradient-to-r from-indigo-600 to-purple-500 flex items-center justify-center">
                 <span className="text-white font-bold">L</span>
               </div>
             </div>
